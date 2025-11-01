@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    background: blue;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+nav img{
+    height: 35px;
+}
+
+.hero {
+    background-color: #dce9ff;
+    text-align: center;
+    padding: 20px;
+
+}
+body{
+    background-color: #dce9ff;
+}
+
+/* Image on top */
+.hero-img img {
+    width: 120px;
+    height: auto;
+    /* Adjust height */
+    object-fit: cover;
+    /* Ensures image ﬁts nicely */
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center content */
+.hero-content {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Box around h4+p+h3 */
+.hero-box p{
+   font-size: small;
+   color: #0b53be;
+   padding-top: 5px;
+}
+.hero-box {
+    background-color: white;
+    border: 3px solid #42e610;
+    /* Border of the hero-box */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Separate border for h3 */
+.hero-box h3 {
+    color: #42e610;
+    background-color: #aaa5a5;
+    border: 2px solid #aaa5a5;
+    padding: 8px 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero-img img {
+        width: 90px;
+    }
+
+    .hero-box {
+        padding: 15px;
+    }
+
+    .hero-box h3 {
+        font-size: 1rem;
+    }
+}
+
+
+
+ /* Scoped styles for .reward-section to avoid conﬂicts */
+ .reward-section {
+    --purple: #6f2fa8;
+    --purple-dark: #5a2380;
+    --green: #20b573;
+    --muted: #f3f4f6;
+    --card-bg: #ffffff;
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 24px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #222;
+}
+
+.reward-section .center {
+    text-align: center;
+}
+
+/* 1) Countdown Box */
+.countdown-card {
+    border: 2px solid rgba(111, 47, 168, 0.12);
+    border-radius: 12px;
+    padding: 18px;
+    background: linear-gradient(180deg, rgba(111, 47, 168, 0.03), rgba(32, 181, 115, 0.01));
+    display: inline-block;
+    min-width: 280px;
+}
+
+.countdown-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.countdown-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 12px 16px;
+    min-width: 64px;
+    box-shadow: 0 6px 18px rgba(17, 17, 17, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item .num {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--purple-dark);
+}
+
+.countdown-item .label {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* spacing */
+.spacer-18 {
+    height: 18px;
+}
+
+/* 2) KYC Status Row */
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    border: 1px solid rgba(111, 47, 168, 0.08);
+    padding: 10px 14px;
+    border-radius: 999px;
+    max-width: 520px;
+    margin: 12px auto;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(17, 17, 17, 0.02);
+}
+
+.status-row svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+}
+
+.status-row .status-text {
+    color: #2b6f3d;
+    font-weight: 600;
+}
+
+/* 3) Claim Counter + Progress */
+.claim-card {
+    border: 2px solid rgba(111, 47, 168, 0.12);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 10px auto;
+    max-width: 720px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.6));
+}
+
+.claim-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.claim-count {
+    font-weight: 700;
+    color: var(--purple-dark);
+}
+
+.claim-card img{
+    border-radius: 5rem;
+}
+
+.progress-label {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 4) Claim Button (Gradient Modern Animated) */
+.claim-button {
+    display: inline-block;
+    margin: 18px auto;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg, #8a4bd6, var(--purple));
+    box-shadow: 0 8px 30px rgba(111, 47, 168, 0.18);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* animated gradient sweep */
+.claim-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03) 40%, rgba(255, 255, 255, 0.06));
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.claim-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(111, 47, 168, 0.25);
+}
+
+/* subtle moving gradient */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.claim-button.animated {
+    background-size: 200% 200%;
+    animation: gradientMove 4.2s linear inﬁnite;
+    background-image: linear-gradient(90deg, #8a4bd6 0%, var(--purple) 25%, #7a3cc0 50%, #9c5df0 75%, var(--purple) 100%);
+}
+
+/* 5) 4 Feature Boxes (2x2 Grid) */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.feature-card {
+    border-radius: 12px;
+    padding: 18px;
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.04);
+}
+
+.feature-green {
+    background: linear-gradient(180deg, rgba(32, 181, 115, 0.95), rgba(18, 150, 91, 0.95));
+}
+
+.feature-purple {
+    background: linear-gradient(180deg, rgba(111, 47, 168, 0.95), rgba(86, 33, 138, 0.95));
+}
+
+.feature-card svg {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 8px;
+    opacity: 0.95;
+}
+
+/* 6) About Section */
+.about {
+    text-align: left;
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #0b53be;
+    border: 1px solid rgba(17, 17, 17, 0.03);
+    box-shadow: 0 8px 30px rgba(17, 17, 17, 0.03);
+}
+
+.about h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.about p {
+    margin: 0 0 12px 0;
+    color: white;
+    line-height: 1.25;
+}
+
+.about h3 {
+    margin: 0 0 8px 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.about ol {
+    margin: 0;
+    padding-left: 18px;
+    color: white;
+}
+
+footer{
+    background: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+footer img{
+    height: 30px;
+    margin-left: 15px;
+}
+footer p{
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 760px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .progress-wrap {
+        height: 10px;
+    }
+    .claim-card img {
+        height: 15px;
+    }
+
+    .countdown-item {
+        min-width: 52px;
+        padding: 10px 12px;
+    }
+
+    .reward-section {
+        padding: 16px;
+        margin: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-row {
+        gap: 8px;
+    }
+
+    .countdown-item .num {
+        font-size: 0.95rem;
+    }
+
+    .claim-card,
+    .countdown-card {
+        width: 100%;
+    }
+}
+
